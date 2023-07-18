@@ -120,8 +120,63 @@ button:hover {
     display:flex;
     align-items:center;
     justify-content:center;
-    background-color:yellow;
     display:flex;
+    color:rgba(0, 0, 0, 0);
+    font-weight:800px;
+    font-size:1.5em;
+    transition: 0.3s ease-in;
+}
+
+#home-container>div,
+#container>div {
+    box-shadow:2px 2px 5px rgb(190, 190, 190);
+}
+
+h1 {
+    line-height:15px;
+}
+
+.home-card:hover {
+    color:white;
+    cursor:pointer;
+    background-position:center;
+    background-size:cover;
+}
+
+.food-card {
+    background: url(food.jpeg);
+    background-position:center;
+    background-size:cover;
+}
+
+.food-card:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(food.jpeg);
+    background-position:center;
+    background-size:cover;
+}
+
+.activities-card {
+    background: url(activities.jpeg);
+    background-position:center;
+    background-size:cover;
+}
+
+.activities-card:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(activities.jpeg);
+    background-position:center;
+    background-size:cover;
+}
+
+.bars-card {
+    background: url(bars.jpeg);
+    background-position:center;
+    background-size:cover;
+}
+
+.bars-card:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(bars.jpeg);
+    background-position:center;
+    background-size:cover;
 }
 
 .nikki-card {
@@ -135,8 +190,9 @@ button:hover {
 .description-card {
     height:250px;
     grid-column: 2 / 4;
-    background-color:green;
-    padding:10px;
+    background-color:white;
+    padding:20px;
+    line-height:1.5em;
 }
 
 .landscape-card {
