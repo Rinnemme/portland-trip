@@ -112,6 +112,7 @@ button:hover {
     gap:15px;
     padding:10px;
     grid-template-columns: repeat(3,1fr);
+    grid-template-rows: minmax(250px,100%) 300px 200px;
     width: min(800px,100%);
 }
 
@@ -130,10 +131,6 @@ button:hover {
 #home-container>div,
 #container>div {
     box-shadow:2px 2px 5px rgb(190, 190, 190);
-}
-
-h1 {
-    line-height:15px;
 }
 
 .home-card:hover {
@@ -180,7 +177,6 @@ h1 {
 }
 
 .nikki-card {
-    height:250px;
     background-image: url(nikki.png);
     background-size:cover;
     background-position:center;
@@ -188,11 +184,10 @@ h1 {
 }
 
 .description-card {
-    height:250px;
+    height:100%;
     grid-column: 2 / 4;
     background-color:white;
-    padding:20px;
-    line-height:1.5em;
+    padding:0px 20px 0px 20px;
 }
 
 .landscape-card {
