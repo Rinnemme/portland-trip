@@ -16,6 +16,10 @@ body {
     padding-top:100px;
 }
 
+a {
+    text-decoration:none;
+}
+
 #header {
     display:flex;
     position:absolute;
