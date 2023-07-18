@@ -38,15 +38,39 @@ button:hover {
 }
 
 #food {
-    background-color: #372549
+    background-color: #46315b
+}
+
+#food:hover {
+    background-color: #291a38
+}
+
+#food:active {
+    background-color: #64497e
 }
 
 #activities {
     background-color: #774C60
 }
 
+#activities:hover {
+    background-color: #623c4e
+}
+
+#activities:active {
+    background-color: #915d75
+}
+
 #bars {
     background-color: #B75D69
+}
+
+#bars:hover {
+    background-color: #a24d59
+}
+
+#bars:active {
+    background-color: rgb(206, 116, 128)
 }
 
 #home-image {
