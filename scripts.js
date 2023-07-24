@@ -98,9 +98,9 @@ function loadSceneryModal(element) {
             sceneryModalLink.href = funObjects[i].link
             sceneryModalDistance.textContent = funObjects[i].distance
             sceneryModalDescription.textContent = funObjects[i].description
-            sceneryModalFirst.textContent = funObjects[i].first
-            sceneryModalSecond.textContent = funObjects[i].second
-            sceneryModalThird.textContent = funObjects[i].third
+            sceneryModalFirst.src = funObjects[i].first
+            sceneryModalSecond.src = funObjects[i].second
+            sceneryModalThird.src = funObjects[i].third
         }
     }
     sceneryModal.classList.add("visible")
