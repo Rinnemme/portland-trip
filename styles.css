@@ -147,7 +147,7 @@ button:hover {
 }
 
 #home-container>div,
-#container>div,
+.content-container>div,
 .home-card,
 #scenery-modal-container,
 img {
@@ -235,7 +235,7 @@ img {
     background-size:cover;
 }
 
-#container {
+.content-container {
     display:grid;
     gap:15px;
     padding:10px;
@@ -268,7 +268,7 @@ img {
     width:100%;
 }
 
-#container>.card:hover {
+.content-container>.card:hover {
     scale:1.02;
     box-shadow: 2px 2px 5px rgb(38, 38, 38);
     cursor:pointer;
