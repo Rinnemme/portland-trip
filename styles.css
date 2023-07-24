@@ -149,7 +149,7 @@ button:hover {
 #home-container>div,
 .content-container>div,
 .home-card,
-#scenery-modal-container,
+.modal-container,
 img {
     box-shadow:2px 2px 5px rgb(165, 165, 165);
 }
@@ -278,10 +278,11 @@ img {
     background-image: url(scenery.jpg);
 }
 
-#scenery-modal {
+.modal {
     width:100vw;
     height:100vh;
-    position:absolute;
+    position:fixed;
+    z-index:2;
     top:0;
     display:none;
     align-items:center;
@@ -289,11 +290,11 @@ img {
     background-color:rgba(255, 255, 255, 0.675);
 }
 
-#scenery-modal.visible {
+.modal.visible {
     display:flex;
 }
 
-#scenery-modal-container {
+.modal-container {
     width: min(450px,100%);
     height:80%;
     display:flex;
@@ -305,24 +306,24 @@ img {
     line-height:1.5em;
 }
 
-#scenery-modal-heading {
+.modal-heading {
     text-align:center;
     font-size:1.5em;
     font-weight:bold;
     margin-bottom:10px;
 }
 
-#scenery-modal-link {
+.modal-link {
     align-self:center;
     color: #3F88C5;
     width: fit-content;
 }
 
-#scenery-modal-distance {
+.modal-distance {
     text-align:center;
 }
 
-#close {
+.close {
     position:absolute;
     background-color:#B75D69;
     height:25px;
@@ -331,15 +332,13 @@ img {
     right:15px;
 }
 
-#close:hover {
+.close:hover {
     background-color: #a24d59;
     box-shadow:none;
 }
 
-#scenery-modal-first,
-#scenery-modal-second,
-#scenery-modal-third,
-#scenery-modal-description {
+.moda-image,
+.modal-description {
     width:100%;
     margin-top:30px;
 }
