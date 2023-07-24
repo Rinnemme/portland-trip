@@ -1,7 +1,7 @@
 let foodObjects = []
 let barObjects = []
 let sceneryObjects = []
-let funObject = []
+let funObjects = []
 
 function foodObject(name, link, distance, image, description) {
     this.name = name
