@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+     }
+}
+
 body {
     margin:0;
     padding:0;
@@ -113,12 +122,6 @@ button:hover {
     background-color: #4c9ada
 }
 
-#home-button-container {
-    width:115px;
-    display:flex;
-    justify-content:flex-end;
-}
-
 #home-image {
     height:25px;
     margin-left:auto;
@@ -150,8 +153,15 @@ button:hover {
 .content-container>div,
 .home-card,
 .modal-container,
+.page-header,
 img {
     box-shadow:2px 2px 5px rgb(165, 165, 165);
+}
+
+#home-container,
+.content-container,
+.page-header {
+    animation: fade ease 1s;
 }
 
 .home-card:hover {
@@ -223,7 +233,9 @@ img {
     padding:0px 20px 0px 20px;
 }
 
-.description-card:hover {
+.description-card:hover,
+.page-header:hover,
+.modal:hover {
     cursor:default;
 }
 
@@ -245,6 +257,15 @@ img {
     transition:1s ease-in;
 }
 
+.page-header {
+    font-size:2.5em;
+    font-weight:bold;
+    margin-bottom:30px;
+    color:#1A1423;
+    padding:15px 25px 15px 25px;
+    background-color:white;
+}
+
 .card {
     width: minmax(200px, 1fr);
     display:flex;
@@ -257,7 +278,7 @@ img {
 }
 
 .card>p {
-    background-color:rgba(0, 0, 0, 0.757);
+    background-color:#000000dd;
     position:absolute;
     bottom:0px;
     font-size:.9em;
@@ -288,6 +309,7 @@ img {
     align-items:center;
     justify-content: center;
     background-color:rgba(255, 255, 255, 0.675);
+    animation: fade ease .5s;
 }
 
 .modal.visible {
