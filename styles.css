@@ -57,10 +57,13 @@ button {
     justify-content:center;
     border:none;
     color:white;
+    transition:0.3s ease-in;
 }
 
 button:hover {
     cursor:pointer;
+    box-shadow: 1px 1px 3px rgb(165, 165, 165);
+    scale:1.005;
 }
 
 #food {
@@ -323,6 +326,11 @@ img {
     width:25px;
     top:15px;
     right:15px;
+}
+
+#close:hover {
+    background-color: #a24d59;
+    box-shadow:none;
 }
 
 #scenery-modal-first,
