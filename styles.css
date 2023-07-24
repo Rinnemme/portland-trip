@@ -144,8 +144,10 @@ button:hover {
 
 #home-container>div,
 #container>div,
-.home-card {
-    box-shadow:2px 2px 5px rgb(190, 190, 190);
+.home-card,
+#scenery-modal-container,
+img {
+    box-shadow:2px 2px 5px rgb(165, 165, 165);
 }
 
 .home-card:hover {
@@ -270,4 +272,60 @@ button:hover {
 
 #test-card {
     background-image: url(scenery.jpg);
+}
+
+#scenery-modal {
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-color:rgba(255, 255, 255, 0.675);
+}
+
+#scenery-modal-container {
+    width: min(450px,100%);
+    height:80%;
+    display:flex;
+    position:absolute;
+    flex-direction:column;
+    background-color:white;
+    padding: 50px 50px 50px 50px;
+    overflow:auto;
+    line-height:1.5em;
+}
+
+#scenery-modal-heading {
+    text-align:center;
+    font-size:1.5em;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+#scenery-modal-link {
+    align-self:center;
+    color: #3F88C5;
+    width: fit-content;
+}
+
+#scenery-modal-distance {
+    text-align:center;
+}
+
+#close {
+    position:absolute;
+    background-color:#B75D69;
+    height:25px;
+    width:25px;
+    top:15px;
+    right:15px;
+}
+
+#scenery-modal-first,
+#scenery-modal-second,
+#scenery-modal-third,
+#scenery-modal-description {
+    width:100%;
+    margin-top:30px;
 }
