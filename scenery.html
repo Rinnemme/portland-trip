@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;300;400;600&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="icon" href="30.jpg">
 </head>
-<body>
+<body onload="generateSceneryCards()">
     <div id="header">
         <div id="logo">
             <a href="index.html">30</a>
@@ -39,14 +39,7 @@
             </a>
         </div>
     </div>
-    <div class="content-container" id="scenery-container">
-        <div class="card" id="test-card"><p>What if this is an even longer phrase though</p></div>
-        <div class="card">2</div>
-        <div class="card">3</div>
-        <div class="card">4</div>
-        <div class="card">5</div>
-        <div class="card">6</div>
-    </div>
+    <div class="content-container" id="scenery-container"></div>
     <div id="scenery-modal" class="modal">
         <div id="scenery-modal-container" class="modal-container">
             <button class="close" onclick="closeModal(this.parentElement.parentElement)">✕</button>
