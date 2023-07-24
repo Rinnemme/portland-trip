@@ -250,20 +250,7 @@ button:hover {
     position:relative;
 }
 
-#container>.card:hover {
-    scale:1.02;
-    box-shadow: 2px 2px 5px rgb(38, 38, 38);
-    cursor:pointer;
-}
-
-#test-card {
-    background-image: url(scenery.jpg);
-    background-size:cover;
-    background-position:center;
-    position:relative;
-}
-
-#test-card>p {
+.card>p {
     background-color:rgba(0, 0, 0, 0.757);
     position:absolute;
     bottom:0px;
@@ -273,4 +260,14 @@ button:hover {
     margin:0;
     text-align:center;
     width:100%;
+}
+
+#container>.card:hover {
+    scale:1.02;
+    box-shadow: 2px 2px 5px rgb(38, 38, 38);
+    cursor:pointer;
+}
+
+#test-card {
+    background-image: url(scenery.jpg);
 }
