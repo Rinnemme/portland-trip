@@ -244,4 +244,33 @@ button:hover {
     display:flex;
     align-items:center;
     justify-content:center;
+    transition:0.3s ease-in;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+#container>.card:hover {
+    scale:1.02;
+    box-shadow: 2px 2px 5px rgb(38, 38, 38);
+    cursor:pointer;
+}
+
+#test-card {
+    background-image: url(scenery.jpg);
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+#test-card>p {
+    background-color:rgba(0, 0, 0, 0.757);
+    position:absolute;
+    bottom:0px;
+    font-size:.9em;
+    color:white;
+    padding:10px 20px 10px 20px;
+    margin:0;
+    text-align:center;
+    width:100%;
 }
