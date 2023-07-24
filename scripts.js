@@ -3,6 +3,12 @@ let barObjects = []
 let sceneryObjects = []
 let funObjects = []
 
+const sceneryModal = document.getElementById("scenery-modal")
+
+function toggleModalVisibility(element) {
+    element.classList.toggle("visible")
+}
+
 function foodObject(name, link, distance, image, description) {
     this.name = name
     this.link = link
