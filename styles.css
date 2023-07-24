@@ -63,7 +63,6 @@ button {
 button:hover {
     cursor:pointer;
     box-shadow: 1px 1px 3px rgb(165, 165, 165);
-    scale:1.005;
 }
 
 #food {
