@@ -13,6 +13,16 @@ const foodModalFirst = document.getElementById("food-modal-first")
 const foodModalSecond = document.getElementById("food-modal-second")
 const foodModalThird = document.getElementById("food-modal-third")
 
+const container = document.getElementById("container")
+const modal = document.getElementById("modal")
+const modalHeading = document.getElementById("modal-heading")
+const modalLink = document.getElementById("modal-link")
+const modalDistance = document.getElementById("modal-distance")
+const modalDescription = document.getElementById("modal-description")
+const modalFirst = document.getElementById("modal-first")
+const modalSecond = document.getElementById("modal-second")
+const modalThird = document.getElementById("modal-third")
+
 const barsContainer = document.getElementById("bars-container")
 const barsModal = document.getElementById("bars-modal")
 const barsModalHeading = document.getElementById("bars-modal-heading")
@@ -42,11 +52,6 @@ const sceneryModalDescription = document.getElementById("scenery-modal-descripti
 const sceneryModalFirst = document.getElementById("scenery-modal-first")
 const sceneryModalSecond = document.getElementById("scenery-modal-second")
 const sceneryModalThird = document.getElementById("scenery-modal-third")
-
-
-function closeModal(element) {
-    element.classList.remove("visible")
-}
 
 function foodObject(name, link, distance, image, description, first, second, third) {
     this.name = name
@@ -94,62 +99,6 @@ function sceneryObject(name, link, distance, image, description, first, second, 
     this.second = second
     this.third = third
     sceneryObjects.push(this)
-}
-
-function generateFoodCards() {
-    foodObjects.forEach(object => {
-        const newCard = document.createElement("div")
-        newCard.classList.add("card")
-        newCard.name = object.name
-        newCard.style.backgroundImage = `url(${object.image})`
-        newCard.addEventListener("click", function() {loadFoodModal(this)})
-        const newCardContent = document.createElement("p")
-        newCardContent.textContent = `${object.name}`
-        newCard.appendChild(newCardContent)
-        foodContainer.appendChild(newCard)
-    })
-}
-
-function generateBarCards() {
-    barObjects.forEach(object => {
-        const newCard = document.createElement("div")
-        newCard.classList.add("card")
-        newCard.name = object.name
-        newCard.style.backgroundImage = `url(${object.image})`
-        newCard.addEventListener("click", function() {loadBarsModal(this)})
-        const newCardContent = document.createElement("p")
-        newCardContent.textContent = `${object.name}`
-        newCard.appendChild(newCardContent)
-        barsContainer.appendChild(newCard)
-    })
-}
-
-function generateActivityCards() {
-    funObjects.forEach(object => {
-        const newCard = document.createElement("div")
-        newCard.classList.add("card")
-        newCard.name = object.name
-        newCard.style.backgroundImage = `url(${object.image})`
-        newCard.addEventListener("click", function() {loadActivitiesModal(this)})
-        const newCardContent = document.createElement("p")
-        newCardContent.textContent = `${object.name}`
-        newCard.appendChild(newCardContent)
-        activitiesContainer.appendChild(newCard)
-    })
-}
-
-function generateSceneryCards() {
-    sceneryObjects.forEach(object => {
-        const newCard = document.createElement("div")
-        newCard.classList.add("card")
-        newCard.name = object.name
-        newCard.style.backgroundImage = `url(${object.image})`
-        newCard.addEventListener("click", function() {loadSceneryModal(this)})
-        const newCardContent = document.createElement("p")
-        newCardContent.textContent = `${object.name}`
-        newCard.appendChild(newCardContent)
-        sceneryContainer.appendChild(newCard)
-    })
 }
 
 function loadFoodModal(element) {
@@ -210,6 +159,95 @@ function loadSceneryModal(element) {
         }
     }
     sceneryModal.classList.add("visible")
+}
+
+function loadModal(element, array) {
+    for (let i=0; i<array.length; i++) {
+        if (array[i].name === element.name) {
+            modalHeading.textContent = array[i].name
+            modalLink.href = array[i].link
+            modalDistance.textContent = array[i].distance
+            modalDescription.textContent = array[i].description
+            modalFirst.src = array[i].first
+            modalSecond.src = array[i].second
+            modalThird.src = array[i].third
+        }
+    }
+    modal.classList.add("visible")
+}
+
+function closeModal(element) {
+    element.parentElement.parentElement.classList.remove("visible")
+}
+
+function generateFoodCards() {
+    foodObjects.forEach(object => {
+        const newCard = document.createElement("div")
+        newCard.classList.add("card")
+        newCard.name = object.name
+        newCard.style.backgroundImage = `url(${object.image})`
+        newCard.addEventListener("click", function() {loadFoodModal(this)})
+        const newCardContent = document.createElement("p")
+        newCardContent.textContent = `${object.name}`
+        newCard.appendChild(newCardContent)
+        foodContainer.appendChild(newCard)
+    })
+}
+
+function generateBarCards() {
+    barObjects.forEach(object => {
+        const newCard = document.createElement("div")
+        newCard.classList.add("card")
+        newCard.name = object.name
+        newCard.style.backgroundImage = `url(${object.image})`
+        newCard.addEventListener("click", function() {loadBarsModal(this)})
+        const newCardContent = document.createElement("p")
+        newCardContent.textContent = `${object.name}`
+        newCard.appendChild(newCardContent)
+        barsContainer.appendChild(newCard)
+    })
+}
+
+function generateActivityCards() {
+    funObjects.forEach(object => {
+        const newCard = document.createElement("div")
+        newCard.classList.add("card")
+        newCard.name = object.name
+        newCard.style.backgroundImage = `url(${object.image})`
+        newCard.addEventListener("click", function() {loadActivitiesModal(this)})
+        const newCardContent = document.createElement("p")
+        newCardContent.textContent = `${object.name}`
+        newCard.appendChild(newCardContent)
+        activitiesContainer.appendChild(newCard)
+    })
+}
+
+function generateSceneryCards() {
+    sceneryObjects.forEach(object => {
+        const newCard = document.createElement("div")
+        newCard.classList.add("card")
+        newCard.name = object.name
+        newCard.style.backgroundImage = `url(${object.image})`
+        newCard.addEventListener("click", function() {loadModal(this, sceneryObjects, sceneryModal, sceneryModalHeading, sceneryModalLink, sceneryModalDistance, sceneryModalDescription, sceneryModalFirst, sceneryModalSecond, sceneryModalThird)})
+        const newCardContent = document.createElement("p")
+        newCardContent.textContent = `${object.name}`
+        newCard.appendChild(newCardContent)
+        sceneryContainer.appendChild(newCard)
+    })
+}
+
+function generateCards(array) {
+    array.forEach(object => {
+        const newCard = document.createElement("div")
+        newCard.classList.add("card")
+        newCard.name = object.name
+        newCard.style.backgroundImage = `url(${object.image})`
+        newCard.addEventListener("click", function() {loadModal(this, array)})
+        const newCardContent = document.createElement("p")
+        newCardContent.textContent = `${object.name}`
+        newCard.appendChild(newCardContent)
+        container.appendChild(newCard)
+    })
 }
 
 const portlandMercado = new foodObject(`Portland Mercado Food Trucks`, `https://www.portlandmercado.org/`, `3.4 miles`, `https://lh3.googleusercontent.com/p/AF1QipNbv-wZ2S9FJYrYkxNAOd2u_JdGgvqusCc1u0UD=s680-w680-h510`, `Bridging diverse cultures through food, art, and entertainment within our community of permanent businesses, at our public market and Comcast Plaza, our small business support programming, and incubator kitchen. Portland Mercado is open from 11 am-8 pm seven days a week!`, `https://images.squarespace-cdn.com/content/v1/52b0ec2fe4b09532a541e01c/1676488548641-NYLLX0P9DFZA40GAFX56/_MG_0917.jpg?format=2500w`, `https://images.squarespace-cdn.com/content/v1/52b0ec2fe4b09532a541e01c/1676488643616-Z91NU2P8CB14GEPHK3ZS/_MG_0890.jpg?format=2500w`, `https://images.squarespace-cdn.com/content/v1/52b0ec2fe4b09532a541e01c/1676488285551-HJL1PSOS6H5F7HHQOB8J/Full+Res+Taste+of+Portland-72.jpg?format=2500w`)
