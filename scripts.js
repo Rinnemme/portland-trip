@@ -40,9 +40,15 @@ function loadModal(element, array) {
     modal.classList.add("visible")
 }
 
-function closeModal(element) {
-    element.parentElement.parentElement.classList.remove("visible")
-    // The close buttons are grandchildren of the modal elements
+function closeModal(event) {
+    if (event.target!==modalContainer && event.target!==modalHeading
+        & event.target!==modalLink && event.target!==modalDistance
+        && event.target!==modalDescription && event.target!==modalFirst
+        && event.target!==modalSecond && event.target!==modalThird) {
+        modal.classList.remove("visible")
+    }
+    else {return}
+    
 }
 
 function generateCards(array) {
