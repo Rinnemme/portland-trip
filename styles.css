@@ -126,7 +126,7 @@ button:hover {
     grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     grid-template-rows: minmax(250px,100%);
     justify-content:center;
-    padding:10px;
+    padding:10px 10px 80px 10px;
     width: min(800px,100%);
 }
 
@@ -252,7 +252,7 @@ img {
     gap:15px;
     grid-auto-rows:200px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding:10px;
+    padding:10px 10px 80px 10px;
     transition:1s ease-in;
     width: min(800px,100%);
 }
