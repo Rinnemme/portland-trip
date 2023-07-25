@@ -101,66 +101,6 @@ function sceneryObject(name, link, distance, image, description, first, second, 
     sceneryObjects.push(this)
 }
 
-function loadFoodModal(element) {
-    for (let i=0; i<foodObjects.length; i++) {
-        if (foodObjects[i].name === element.name) {
-            foodModalHeading.textContent = foodObjects[i].name
-            foodModalLink.href = foodObjects[i].link
-            foodModalDistance.textContent = foodObjects[i].distance
-            foodModalDescription.textContent = foodObjects[i].description
-            foodModalFirst.src = foodObjects[i].first
-            foodModalSecond.src = foodObjects[i].second
-            foodModalThird.src = foodObjects[i].third
-        }
-    }
-    foodModal.classList.add("visible")
-}
-
-function loadBarsModal(element) {
-    for (let i=0; i<barObjects.length; i++) {
-        if (barObjects[i].name === element.name) {
-            barsModalHeading.textContent = barObjects[i].name
-            barsModalLink.href = barObjects[i].link
-            barsModalDistance.textContent = barObjects[i].distance
-            barsModalDescription.textContent = barObjects[i].description
-            barsModalFirst.src = barObjects[i].first
-            barsModalSecond.src = barObjects[i].second
-            barsModalThird.src = barObjects[i].third
-        }
-    }
-    barsModal.classList.add("visible")
-}
-
-function loadActivitiesModal(element) {
-    for (let i=0; i<funObjects.length; i++) {
-        if (funObjects[i].name === element.name) {
-            activitiesModalHeading.textContent = funObjects[i].name
-            activitiesModalLink.href = funObjects[i].link
-            activitiesModalDistance.textContent = funObjects[i].distance
-            activitiesModalDescription.textContent = funObjects[i].description
-            activitiesModalFirst.src = funObjects[i].first
-            activitiesModalSecond.src = funObjects[i].second
-            activitiesModalThird.src = funObjects[i].third
-        }
-    }
-    activitiesModal.classList.add("visible")
-}
-
-function loadSceneryModal(element) {
-    for (let i=0; i<sceneryObjects.length; i++) {
-        if (sceneryObjects[i].name === element.name) {
-            sceneryModalHeading.textContent = sceneryObjects[i].name
-            sceneryModalLink.href = sceneryObjects[i].link
-            sceneryModalDistance.textContent = sceneryObjects[i].distance
-            sceneryModalDescription.textContent = sceneryObjects[i].description
-            sceneryModalFirst.src = sceneryObjects[i].first
-            sceneryModalSecond.src = sceneryObjects[i].second
-            sceneryModalThird.src = sceneryObjects[i].third
-        }
-    }
-    sceneryModal.classList.add("visible")
-}
-
 function loadModal(element, array) {
     for (let i=0; i<array.length; i++) {
         if (array[i].name === element.name) {
@@ -178,62 +118,7 @@ function loadModal(element, array) {
 
 function closeModal(element) {
     element.parentElement.parentElement.classList.remove("visible")
-}
-
-function generateFoodCards() {
-    foodObjects.forEach(object => {
-        const newCard = document.createElement("div")
-        newCard.classList.add("card")
-        newCard.name = object.name
-        newCard.style.backgroundImage = `url(${object.image})`
-        newCard.addEventListener("click", function() {loadFoodModal(this)})
-        const newCardContent = document.createElement("p")
-        newCardContent.textContent = `${object.name}`
-        newCard.appendChild(newCardContent)
-        foodContainer.appendChild(newCard)
-    })
-}
-
-function generateBarCards() {
-    barObjects.forEach(object => {
-        const newCard = document.createElement("div")
-        newCard.classList.add("card")
-        newCard.name = object.name
-        newCard.style.backgroundImage = `url(${object.image})`
-        newCard.addEventListener("click", function() {loadBarsModal(this)})
-        const newCardContent = document.createElement("p")
-        newCardContent.textContent = `${object.name}`
-        newCard.appendChild(newCardContent)
-        barsContainer.appendChild(newCard)
-    })
-}
-
-function generateActivityCards() {
-    funObjects.forEach(object => {
-        const newCard = document.createElement("div")
-        newCard.classList.add("card")
-        newCard.name = object.name
-        newCard.style.backgroundImage = `url(${object.image})`
-        newCard.addEventListener("click", function() {loadActivitiesModal(this)})
-        const newCardContent = document.createElement("p")
-        newCardContent.textContent = `${object.name}`
-        newCard.appendChild(newCardContent)
-        activitiesContainer.appendChild(newCard)
-    })
-}
-
-function generateSceneryCards() {
-    sceneryObjects.forEach(object => {
-        const newCard = document.createElement("div")
-        newCard.classList.add("card")
-        newCard.name = object.name
-        newCard.style.backgroundImage = `url(${object.image})`
-        newCard.addEventListener("click", function() {loadModal(this, sceneryObjects, sceneryModal, sceneryModalHeading, sceneryModalLink, sceneryModalDistance, sceneryModalDescription, sceneryModalFirst, sceneryModalSecond, sceneryModalThird)})
-        const newCardContent = document.createElement("p")
-        newCardContent.textContent = `${object.name}`
-        newCard.appendChild(newCardContent)
-        sceneryContainer.appendChild(newCard)
-    })
+    // The close buttons are grandchildren of the modal elements
 }
 
 function generateCards(array) {
