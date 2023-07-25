@@ -288,18 +288,6 @@ img {
     cursor:pointer;
 }
 
-.modal-container {
-    background-color:white;
-    display:flex;
-    flex-direction:column;
-    height:80%;
-    line-height:1.5em;
-    overflow:auto;
-    padding: 50px 50px 50px 50px;
-    position:absolute;
-    width: min(450px,100%);
-}
-
 .modal {
     align-items:center;
     animation: fade ease .5s;
@@ -315,6 +303,18 @@ img {
 
 .modal.visible {
     display:flex;
+}
+
+.modal-container {
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    height:min(80%, 700px);
+    line-height:1.5em;
+    overflow:auto;
+    padding: 50px 50px 50px 50px;
+    position:absolute;
+    width: min(450px,100%);
 }
 
 .modal-heading {
