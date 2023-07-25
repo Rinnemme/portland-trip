@@ -12,7 +12,7 @@ const modalDescription = document.getElementById("modal-description")
 const modalFirst = document.getElementById("modal-first")
 const modalSecond = document.getElementById("modal-second")
 const modalThird = document.getElementById("modal-third")
-const modalContainer = document.getElementById("modal-container")
+const modalWindow = document.getElementById("modal-window")
 
 function cardObject(name, link, distance, image, description, first, second, third, targetArray) {
     this.name = name
@@ -42,7 +42,7 @@ function loadModal(element, array) {
 }
 
 function closeModal(event) {
-    if (event.target!==modalContainer && event.target!==modalHeading
+    if (event.target!==modalWindow && event.target!==modalHeading
         & event.target!==modalLink && event.target!==modalDistance
         && event.target!==modalDescription && event.target!==modalFirst
         && event.target!==modalSecond && event.target!==modalThird) {
