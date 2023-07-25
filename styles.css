@@ -346,6 +346,7 @@ img {
     display:flex;
     height:25px;
     justify-content: center;
+    line-height:0px;
     position:absolute;
     right:15px;
     text-align:center;
