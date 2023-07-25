@@ -12,6 +12,7 @@ const modalDescription = document.getElementById("modal-description")
 const modalFirst = document.getElementById("modal-first")
 const modalSecond = document.getElementById("modal-second")
 const modalThird = document.getElementById("modal-third")
+const modalContainer = document.getElementById("modal-container")
 
 function cardObject(name, link, distance, image, description, first, second, third, targetArray) {
     this.name = name
@@ -48,7 +49,12 @@ function closeModal(event) {
         modal.classList.remove("visible")
     }
     else {return}
-    
+}
+
+document.onkeydown = (event) => {
+    if (event.key === "Escape") {
+        closeModal(event)
+    }
 }
 
 function generateCards(array) {
