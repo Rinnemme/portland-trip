@@ -14,15 +14,15 @@
 }
 
 body {
-    margin:0;
-    padding:0;
-    width:100vw;
+    align-items:center;
     background-color:#F7F7F7;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    align-items:center;
+    margin:0;
+    padding:0;
     padding-top:100px;
+    width:100vw;
 }
 
 a {
@@ -30,48 +30,48 @@ a {
 }
 
 #header {
-    display:flex;
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    width:100%;
     align-items:center;
-    justify-content: center;
-    height: 60px;
     background-color:white;
     box-shadow: 0px -15px 10px 20px grey;
+    display:flex;
+    height: 60px;
+    justify-content: center;
+    left:0;
+    position:absolute;
+    right:0;
+    top:0;
+    width:100%;
 }
 
 #logo {
-    font-weight:bold;
     font-size:1.3em;
-    position:absolute;
+    font-weight:bold;
     left:15px;
+    position:absolute;
 }
 
 #nav-buttons {
+    align-items:center;
     display:flex;
     gap:10px;
-    align-items:center;
     justify-content: center;
 }
 
 button {
-    border-radius:1.25em;
-    height:2.5em;
-    padding:3px 12px 3px 12px;
-    display:inline-flex;
     align-items:center;
-    justify-content:center;
     border:none;
+    border-radius:1.25em;
     color:white;
+    display:inline-flex;
+    height:2.5em;
+    justify-content:center;
+    padding:3px 12px 3px 12px;
     transition:0.3s ease-in;
 }
 
 button:hover {
-    cursor:pointer;
     box-shadow: 1px 1px 3px rgb(165, 165, 165);
+    cursor:pointer;
 }
 
 #food {
@@ -122,30 +122,24 @@ button:hover {
     background-color: #4c9ada
 }
 
-#home-image {
-    height:25px;
-    margin-left:auto;
-}
-
 #home-container {
     display:grid;
-    justify-content:center;
     gap:15px;
-    padding:10px;
     grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     grid-template-rows: minmax(250px,100%);
+    justify-content:center;
+    padding:10px;
     width: min(800px,100%);
 }
 
 .home-card {
-    display:flex;
-    height:200px;
     align-items:center;
-    justify-content:center;
-    display:flex;
     color:rgba(0, 0, 0, 0);
-    font-weight:800px;
+    display:flex;
     font-size:1.5em;
+    font-weight:800px;
+    height:200px;
+    justify-content:center;
     transition: 0.3s ease-in;
 }
 
@@ -165,10 +159,37 @@ img {
 }
 
 .home-card:hover {
+    box-shadow: 2px 2px 5px rgb(38, 38, 38);
     color:white;
     cursor:pointer;
     scale:1.02;
     text-shadow: 0px 0px 10px black;
+}
+
+.nikki-card {
+    background-image: url(nikki.png);
+    background-size:cover;
+    background-position:center;
+}
+
+.description-card {
+    background-color:white;
+    height:100%;
+    padding:0px 20px 0px 20px;
+}
+
+.description-card:hover,
+.page-header:hover,
+.modal:hover {
+    cursor:default;
+}
+
+.landscape-card {
+    background-image: url(portland.jpg);
+    background-size:cover;
+    grid-column: 1 / -1;
+    height:400px;
+    width: min(800px,100%);
 }
 
 .food-card {
@@ -179,6 +200,18 @@ img {
 
 .food-card:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(food.jpeg);
+    background-position:center;
+    background-size:cover;
+}
+
+.bars-card {
+    background: url(bars.jpeg);
+    background-position:center;
+    background-size:cover;
+}
+
+.bars-card:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(bars.jpeg);
     background-position:center;
     background-size:cover;
 }
@@ -207,132 +240,88 @@ img {
     background-size:cover;
 }
 
-
-.bars-card {
-    background: url(bars.jpeg);
-    background-position:center;
-    background-size:cover;
-}
-
-.bars-card:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(bars.jpeg);
-    background-position:center;
-    background-size:cover;
-}
-
-.nikki-card {
-    background-image: url(nikki.png);
-    background-size:cover;
-    background-position:center;
-    display:flex;
-}
-
-.description-card {
-    height:100%;
+.page-header {
     background-color:white;
-    padding:0px 20px 0px 20px;
-}
-
-.description-card:hover,
-.page-header:hover,
-.modal:hover {
-    cursor:default;
-}
-
-.landscape-card {
-    height:400px;
-    grid-column: 1 / -1;
-    width: min(800px,100%);
-    background-image: url(portland.jpg);
-    background-size:cover;
+    color:#1A1423;
+    font-size:2.5em;
+    font-weight:bold;
+    margin-bottom:30px;
+    padding:15px 25px 15px 25px;
 }
 
 .content-container {
     display:grid;
     gap:15px;
-    padding:10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows:200px;
-    width: min(800px,100%);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding:10px;
     transition:1s ease-in;
-}
-
-.page-header {
-    font-size:2.5em;
-    font-weight:bold;
-    margin-bottom:30px;
-    color:#1A1423;
-    padding:15px 25px 15px 25px;
-    background-color:white;
+    width: min(800px,100%);
 }
 
 .card {
-    width: minmax(200px, 1fr);
-    display:flex;
     align-items:center;
-    justify-content:center;
-    transition:0.3s ease-in;
-    background-size:cover;
     background-position:center;
+    background-size:cover;
+    display:flex;
+    justify-content:center;
     position:relative;
+    transition:0.3s ease-in;
+    width: minmax(200px, 1fr);
 }
 
 .card>p {
     background-color:#000000dd;
-    position:absolute;
     bottom:0px;
-    font-size:.9em;
     color:white;
-    padding:10px 20px 10px 20px;
+    font-size:.9em;
     margin:0;
+    padding:10px 20px 10px 20px;
+    position:absolute;
     text-align:center;
     width:100%;
 }
 
-.content-container>.card:hover {
+.card:hover {
     scale:1.02;
     box-shadow: 2px 2px 5px rgb(38, 38, 38);
     cursor:pointer;
 }
 
-#test-card {
-    background-image: url(scenery.jpg);
+.modal-container {
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    height:80%;
+    line-height:1.5em;
+    overflow:auto;
+    padding: 50px 50px 50px 50px;
+    position:absolute;
+    width: min(450px,100%);
 }
 
 .modal {
-    width:100vw;
-    height:100vh;
-    position:fixed;
-    z-index:2;
-    top:0;
-    display:none;
     align-items:center;
-    justify-content: center;
-    background-color:rgba(255, 255, 255, 0.675);
     animation: fade ease .5s;
+    background-color:rgba(255, 255, 255, 0.675);
+    display:none;
+    height:100vh;
+    justify-content: center;
+    position:fixed;
+    top:0;
+    width:100vw;
+    z-index:2;
 }
 
 .modal.visible {
     display:flex;
 }
 
-.modal-container {
-    width: min(450px,100%);
-    height:80%;
-    display:flex;
-    position:absolute;
-    flex-direction:column;
-    background-color:white;
-    padding: 50px 50px 50px 50px;
-    overflow:auto;
-    line-height:1.5em;
-}
-
 .modal-heading {
-    text-align:center;
     font-size:1.5em;
     font-weight:bold;
     margin-bottom:10px;
+    text-align:center;
 }
 
 .modal-link {
@@ -345,22 +334,22 @@ img {
     text-align:center;
 }
 
+.modal-image,
+.modal-description {
+    margin-top:30px;
+    width:100%;
+}
+
 .close {
-    position:absolute;
     background-color:#B75D69;
     height:25px;
-    width:25px;
-    top:15px;
+    position:absolute;
     right:15px;
+    top:15px;
+    width:25px;
 }
 
 .close:hover {
     background-color: #a24d59;
     box-shadow:none;
-}
-
-.modal-image,
-.modal-description {
-    width:100%;
-    margin-top:30px;
 }
