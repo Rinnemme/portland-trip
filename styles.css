@@ -21,7 +21,6 @@ body {
     justify-content:center;
     margin:0;
     padding:0;
-    padding-top:100px;
 }
 
 a {
@@ -35,10 +34,11 @@ a {
     display:flex;
     height: 60px;
     justify-content: center;
-    left:0;
-    position:absolute;
-    right:0;
+    margin-bottom:40px;
+    position:sticky;
     top:0;
+    width:100%;
+    z-index:2;
 }
 
 #logo {
