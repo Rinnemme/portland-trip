@@ -169,7 +169,7 @@ img {
 }
 
 .nikki-card {
-    background-image: url(nikki.png);
+    background-image: url(img/home/nikki.png);
     background-size:cover;
     background-position:center;
 }
@@ -188,7 +188,7 @@ img {
 }
 
 .landscape-card {
-    background-image: url(portland.jpg);
+    background-image: url(img/home/portland.jpg);
     background-size:cover;
     grid-column: 1 / -1;
     height:400px;
@@ -196,49 +196,49 @@ img {
 }
 
 .food-card {
-    background: url(food.jpeg);
+    background: url(img/home/food.jpeg);
     background-position:center;
     background-size:cover;
 }
 
 .food-card:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(food.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(img/home/food.jpeg);
     background-position:center;
     background-size:cover;
 }
 
 .bars-card {
-    background: url(bars.jpeg);
+    background: url(img/home/bars.jpeg);
     background-position:center;
     background-size:cover;
 }
 
 .bars-card:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(bars.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(img/home/bars.jpeg);
     background-position:center;
     background-size:cover;
 }
 
 .activities-card {
-    background: url(activities.jpeg);
+    background: url(img/home/activities.jpeg);
     background-position:center;
     background-size:cover;
 }
 
 .activities-card:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(activities.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(img/home/activities.jpeg);
     background-position:center;
     background-size:cover;
 }
 
 .scenery-card {
-    background: url(scenery.jpg);
+    background: url(img/home/scenery.jpg);
     background-position:center;
     background-size:cover;
 }
 
 .scenery-card:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(scenery.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.766),rgba(0, 0, 0, 0.473)), url(img/home/scenery.jpg);
     background-position:center;
     background-size:cover;
 }
